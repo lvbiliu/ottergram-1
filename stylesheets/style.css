@@ -64,7 +64,7 @@ a {
 
 .thumbnail-list {
   list-style: none;
-  padding: 0;
+  padding: 20px 0;
   white-space: nowrap;
   overflow-x: auto;
   display: flex;
@@ -79,6 +79,11 @@ a {
   display: inline-block;
   min-width: 120px;
   max-width: 120px;
+  transition: transform 133ms ease-in-out;
+}
+
+.thumbnail-item:hover {
+  transform: scale(1.2);
 }
 
 .detail-image-container {
@@ -95,6 +100,12 @@ a {
 .detail-image-frame {
   text-align: center;
   position: relative;
+  transition: transform 333ms cubic-bezier(1, .06, .28,1);
+}
+
+.is-tiny{
+  transform: scale(0.001);
+  transition: transform 0ms;
 }
 
 .detail-image-title {
@@ -120,6 +131,8 @@ a {
   max-width: 80%;
 }
 
+
+/* media */
 @media all and (min-width:768px)  {
   .main-content {
     flex-direction: row;
@@ -130,6 +143,7 @@ a {
     flex-direction: column;
     order: 0;
     margin-left: 20px;
+    padding: 0 35px;
   }
 
   .thumbnail-item {
